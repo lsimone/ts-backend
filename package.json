@@ -1,0 +1,33 @@
+{
+  "name": "allocazioni-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev -r tsconfig-paths/register src/index.ts",
+    "dev-mysql": "cd ../docker-compose-lamp && yarn start",
+    "build": "rimraf dist && tsc --project tsconfig.json",
+    "start": "NODE_ENV=production node -r ./tsconfig-paths-bootstrap.js dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.9.16",
+    "graphql": "^14.5.8",
+    "lodash": "^4.17.15",
+    "mysql": "^2.17.1",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^0.17.6",
+    "typeorm": "^0.2.22"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^13.1.6",
+    "rimraf": "^3.0.0",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.7.4"
+  }
+}
